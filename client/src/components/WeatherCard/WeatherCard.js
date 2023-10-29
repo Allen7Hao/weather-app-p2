@@ -4,11 +4,19 @@ import OtherCities from "./components/OtherCities";
 import SearchBar from "./components/SearchBar";
 
 const WeatherCard = () => (
-  <div className="w-4/5 h-4/5 mx-auto rounded-3xl bg-white overflow-hidden">
-    <CurrentCity />
-    <Forecast />
-    <SearchBar />
-    <OtherCities />
+  <div className="w-4/5 h-4/5 mx-auto rounded-3xl bg-white overflow-hidden grid grid-cols-6 grid-rows-6 gap-8">
+    <div className="row-span-6 col-span-2">
+      <CurrentCity />
+    </div>
+    <div className="row-span-3 col-span-4">
+      <Forecast />
+    </div>
+    <div className="row-span-1 col-span-4">
+      <SearchBar />
+    </div>
+    <div className="row-span-2 col-span-4">
+      <OtherCities />
+    </div>
   </div>
 );
 
